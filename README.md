@@ -1,6 +1,6 @@
 ## Sun Sensor Heading Determination
 ---
-This project uses sun sensor and accelerometer data to determine the heading of the rover. It interfaces with the cspice package, included in the position_estimator directory, used to calculate the sun vector
+This project uses sun sensor and accelerometer data to determine the heading of the rover. It interfaces with the [cspice](https://github.com/swimyoda/cspice) used to calculate the sun vector
 ---
 # Content
 The important directories of the package are:
