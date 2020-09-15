@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="sunsensor_pose_estimation" type="sunsensor_pose_estimation_spice_pub" name="spice_pub"/>
+  <node pkg="sunsensor_pose_estimation" type="sunsensor_pose_estimation_true_pose" name="true_pose"/>
+  <node pkg="sunsensor_pose_estimation" type="sunsensor_pose_estimation_sunsensor" name="sunsensor"/>
+  <node pkg="sunsensor_pose_estimation" type="sunsensor_pose_estimation_inclinometer" name="inclinometer" output="screen"/>
+  <node pkg="sunsensor_pose_estimation" type="sunsensor_pose_estimation_pose_est" name="pose_est" output="screen"/>
+</launch>
+

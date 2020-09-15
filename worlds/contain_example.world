@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <world name='default'>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://lamp_post</uri>
+      <pose frame=''>-3 -3 0 0 0 1.570796</pose>
+    </include>
+    <include>
+      <uri>model://ladder_60deg_0rails</uri>
+      <pose>0 0.15396 0.266667 0 -0 0</pose>
+    </include>
+	<light type="directional" name="sun">
+		<cast_shadows>true</cast_shadows>
+		<pose>0 0 10 0 0 0</pose>
+		<diffuse>0.8 0.8 0.8 1</diffuse>
+		<specular>0.2 0.2 0.2 1</specular>
+		<attenuation>
+			  <range>1000</range>
+			  <constant>0.9</constant>
+			  <linear>0.01</linear>
+			  <quadratic>0.001</quadratic>
+		</attenuation>
+		<direction>-0.5 0.9 -0.1</direction>
+  	</light>
+    <model name='unit_sphere'>
+      <pose frame=''>0 1 3 0 0 0</pose>
+      <link name='only_link'>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <!-- Launch example plugin -->
+    <plugin name='sunPlugin' filename='libspicyboi_sun.so'/>
+</world>
+</sdf>

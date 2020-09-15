@@ -1,0 +1,10 @@
+KPL/MK
+\begindata
+	PATH_VALUES	= ( '/home/dev/ws/src/sunsensor_pose_estimation/spice_kernels' )
+	PATH_SYMBOLS	= ( 'KERNELS' )
+	KERNELS_TO_LOAD = (
+		'$KERNELS/earth_assoc_itrf93.tf',
+		'$KERNELS/pck00010.tpc',
+		'$KERNELS/de421.bsp',
+		'$KERNELS/naif0012.tls',
+		)
